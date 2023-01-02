@@ -7,3 +7,21 @@
 * {
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .icon-hover {
+    @apply hover:bg-blue-200 hover:bg-opacity-50 border-[1px] border-transparent hover:border-blue-300;
+  }
+  .icon-transition {
+    @apply transition-all duration-[100ms] ease-in-out;
+  }
+}
+
+@layer components {
+  .toolbar-img {
+    @apply h-[80px]
+  }
+  .toolbar-img-hover {
+    @apply p-[5px] hover:shadow-toolbarIconHover cursor-pointer icon-transition
+  }
+}

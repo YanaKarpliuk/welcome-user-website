@@ -22,7 +22,8 @@
     "baseUrl": "./src",
     "paths": {
       "@mainScreen/*": ["components/MainScreen/*"],
-      "@toolbar/*": ["components/Toolbar/*"]
+      "@toolbar/*": ["components/Toolbar/*"],
+      "@icons/*": ["images/icons/*"]
     }
   },
   "include": [
