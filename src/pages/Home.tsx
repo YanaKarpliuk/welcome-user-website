@@ -3,9 +3,9 @@ import Toolbar from "@toolbar/Toolbar";
 
 export default function Home() {
   return (
-    <div className="h-[100vh] font-display">
+    <div>
       <MainScreen />
-      <Toolbar />
+      
     </div>
   );
 }

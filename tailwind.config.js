@@ -10,7 +10,8 @@ module.exports = {
       },
       boxShadow: {
         'menuBtn': '1px 1px 2px 1px #737373, inset 1px 1px 1px 1px #fff',
-        'toolbarIconHover': '1px 1px 2px 1px #737373',
+        'lightHover': '1px 1px 2px 1px #737373',
+        'darkHover': '1px 1px 2px 1px #000',
         'menuBtnHover': '1px 1px 2px 1px #000, inset 1px 1px 1px 1px #fff'
       }
 

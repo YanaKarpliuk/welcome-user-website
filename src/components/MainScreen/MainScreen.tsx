@@ -2,29 +2,45 @@ import computerIcon from "@icons/computer.svg";
 import musicIcon from "@icons/music.svg";
 import infoIcon from "@icons/info.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function MainScreen() {
-  const [userName, setUserName] = useState("");
+  let user;
+
+  if (localStorage["name"]) {
+    user = JSON.parse(localStorage.getItem("name") || "");
+  }
+
+  const [userName, setUserName] = useState(user || "");
+
+  useEffect(() => {
+    localStorage.setItem("name", JSON.stringify(userName));
+  }, [userName]);
 
   return (
-    <div className="h-[85%] bg-greenBg p-[30px]">
-      <ul className="flex justify-between">
+    <div className="h-[100vh] bg-greenBg p-[30px]">
+      <ul className="flex justify-between text-white text-[18px]">
         <div>
-          <li className="mb-[50px] icon-transition icon-hover">
-            <Link to="/my-computer">
+          <li className="mb-[50px] transition-effect icon-hover">
+            <Link to="/my-computer/about" className="centered-items">
               <img src={computerIcon} alt="my computer" className="h-[100px]" />
+              <p>My computer</p>
             </Link>
           </li>
-          <li className="icon-hover icon-transition cursor-pointer relative z-10">
-            <img src={musicIcon} alt="music" className="h-[100px]" />
+          <li className="icon-hover transition-effect cursor-pointer">
+            <Link to="/music" className="centered-items relative z-10">
+              <img src={musicIcon} alt="music" className="h-[100px]" />
+              <p>Music</p>
+            </Link>
           </li>
         </div>
-        <li className="h-[100px] icon-hover icon-transition cursor-pointer">
+        <li className="h-[100%] icon-hover transition-effect cursor-pointer centered-items">
           <img src={infoIcon} alt="info" className="h-[100px]" />
+          <p>Info</p>
         </li>
       </ul>
-      <div className="relative bottom-[10%] text-[150px] text-white flex flex-col items-center">
+      <div className="relative bottom-[10%] text-[150px] text-white centered-items">
         <p className="leading-[150px] tracking-[5px] uppercase">Welcome</p>
         <input
           type="text"
@@ -32,7 +48,7 @@ export default function MainScreen() {
           onChange={(e) => setUserName(e.target.value)}
           maxLength={20}
           placeholder="user"
-          className="uppercase bg-transparent min-w-[270px] h-[100%] p-[5px] placeholder-white placeholder:italic border-transparent focus:border-blue-300 border-[1px] focus:border-[1px] focus:outline-none"
+          className="uppercase bg-transparent min-w-[260px] h-[100%] placeholder-white placeholder:italic border-transparent focus:border-blue-300 border-[1px] focus:border-[1px] focus:outline-none"
           style={{ width: `${userName.length}ch` }}
         />
       </div>

@@ -12,8 +12,11 @@
   .icon-hover {
     @apply hover:bg-blue-200 hover:bg-opacity-50 border-[1px] border-transparent hover:border-blue-300;
   }
-  .icon-transition {
+  .transition-effect {
     @apply transition-all duration-[100ms] ease-in-out;
+  }
+  .centered-items {
+    @apply flex flex-col items-center
   }
 }
 
@@ -22,6 +25,18 @@
     @apply h-[80px]
   }
   .toolbar-img-hover {
-    @apply p-[5px] hover:shadow-toolbarIconHover cursor-pointer icon-transition
+    @apply p-[5px] hover:shadow-lightHover cursor-pointer transition-effect
+  }
+  .menu-img {
+    @apply w-[50px] mr-[20px]
+  }
+  .menu-list-item-link {
+    @apply text-[20px] tracking-[1px] flex items-center py-[10px] px-[20px] hover:bg-blue-800 hover:text-white cursor-pointer transition-effect
+  }
+  .menu-list-item-border {
+    @apply border-b-[1px] border-b-gray-400
+  }
+  .menu-list-item-border:last-child {
+    @apply border-b-0
   }
 }
