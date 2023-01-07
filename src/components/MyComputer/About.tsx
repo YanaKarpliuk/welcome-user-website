@@ -7,7 +7,6 @@ export default function About() {
   const [top, setTop] = useState(95);
 
   function handleImageMovement(e: React.MouseEvent<HTMLElement, MouseEvent>) {
-    console.log(e);
     setLeft(e.clientX);
     setTop(e.clientY);
   }

@@ -1,6 +1,6 @@
 import TopSection from "components/TopSection/TopSection";
 import folderIcon from "@icons/folder.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { isTemplateSpan } from "typescript";
 
 const dataList = [
@@ -20,10 +20,10 @@ export default function MyComputer() {
           {dataList.map((item) => {
             return (
               <li key={item.title}>
-                <Link to={item.link} className="menu-list-item-link">
+                <NavLink to={item.link} className={({isActive}) => isActive ? "menu-list-item-link-active" : "menu-list-item-link"}>
                   <img className="h-[50px]" src={folderIcon} alt="folder" />
                   <p>{item.title}</p>
-                </Link>
+                </NavLink>
               </li>
             );
           })}
