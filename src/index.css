@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 * {
   box-sizing: border-box;
@@ -16,27 +16,27 @@
     @apply transition-all duration-[100ms] ease-in-out;
   }
   .centered-items {
-    @apply flex flex-col items-center
+    @apply flex flex-col items-center;
   }
 }
 
 @layer components {
   .toolbar-img {
-    @apply h-[80px]
+    @apply h-[80px];
   }
   .toolbar-img-hover {
-    @apply p-[5px] hover:shadow-lightHover cursor-pointer transition-effect
+    @apply p-[5px] hover:shadow-lightHover cursor-pointer transition-effect;
   }
   .menu-img {
-    @apply w-[50px] mr-[20px]
+    @apply w-[50px] mr-[20px];
   }
   .menu-list-item-link {
-    @apply text-[20px] tracking-[1px] flex items-center py-[10px] px-[20px] hover:bg-blue-800 hover:text-white cursor-pointer transition-effect
+    @apply text-[20px] tracking-[1px] flex items-center py-[10px] px-[20px] hover:bg-blue-800 hover:text-white cursor-pointer transition-effect;
   }
   .menu-list-item-border {
-    @apply border-b-[1px] border-b-gray-400
+    @apply border-b-[1px] border-b-gray-400;
   }
   .menu-list-item-border:last-child {
-    @apply border-b-0
+    @apply border-b-0;
   }
 }

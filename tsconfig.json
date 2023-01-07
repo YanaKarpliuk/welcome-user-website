@@ -23,7 +23,8 @@
     "paths": {
       "@mainScreen/*": ["components/MainScreen/*"],
       "@toolbar/*": ["components/Toolbar/*"],
-      "@icons/*": ["images/icons/*"]
+      "@icons/*": ["images/icons/*"],
+      "@images/*": ["images/*"]
     }
   },
   "include": [
