@@ -1,10 +1,10 @@
 import ghost from "@images/ghost.gif";
 import Typewriter from "typewriter-effect";
-import { SyntheticEvent, useState } from "react";
+import { useState } from "react";
 
 export default function About() {
-  const [left, setLeft] = useState(1148);
-  const [top, setTop] = useState(95);
+  const [left, setLeft] = useState(0);
+  const [top, setTop] = useState(0);
 
   function handleImageMovement(e: React.MouseEvent<HTMLElement, MouseEvent>) {
     setLeft(e.clientX);
@@ -32,7 +32,10 @@ export default function About() {
       <img
         src={ghost}
         alt="ghost gif"
-        style={{ left: `${left}px`, top: `${top}px` }}
+        style={{
+          left: left === 0 ? "30%" : `${left}px`,
+          top: top === 0 ? "30%" : `${top}px`,
+        }}
         className="absolute h-[100px] transition-ease duration-[1000ms]"
       />
     </section>
