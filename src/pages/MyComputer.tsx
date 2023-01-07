@@ -28,7 +28,7 @@ export default function MyComputer() {
             );
           })}
         </ul>
-        <div className="">
+        <div className="p-[20px] text-[24px]">
           <Outlet />
         </div>
       </div>
