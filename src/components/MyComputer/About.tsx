@@ -1,9 +1,19 @@
 import ghost from "@images/ghost.gif";
 import Typewriter from "typewriter-effect";
+import { SyntheticEvent, useState } from "react";
 
 export default function About() {
+  const [left, setLeft] = useState(1148);
+  const [top, setTop] = useState(95);
+
+  function handleImageMovement(e: React.MouseEvent<HTMLElement, MouseEvent>) {
+    console.log(e);
+    setLeft(e.clientX);
+    setTop(e.clientY);
+  }
+
   return (
-    <section>
+    <section className="flex-1" onMouseMove={(e) => handleImageMovement(e)}>
       <Typewriter
         onInit={(typewriter) => {
           typewriter
@@ -20,8 +30,12 @@ export default function About() {
             .start();
         }}
       />
-
-      <img src={ghost} alt="ghost gif" className="h-[200px] mx-auto" />
+      <img
+        src={ghost}
+        alt="ghost gif"
+        style={{ left: `${left}px`, top: `${top}px` }}
+        className="absolute h-[100px] transition-ease duration-[1000ms]"
+      />
     </section>
   );
 }

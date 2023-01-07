@@ -28,7 +28,7 @@ export default function MyComputer() {
             );
           })}
         </ul>
-        <div className="p-[20px] text-[24px]">
+        <div className="p-[20px] text-[24px] w-[100vw] flex items-stretch">
           <Outlet />
         </div>
       </div>
