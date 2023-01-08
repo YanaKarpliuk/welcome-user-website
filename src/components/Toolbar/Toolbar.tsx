@@ -10,7 +10,7 @@ export default function Toolbar() {
   const [curTime, setCurTime] = useState(new Date());
 
   useEffect(() => {
-    setInterval(() => setCurTime(new Date()), 10000);
+    setInterval(() => setCurTime(new Date()), 1000);
   }, []);
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -45,6 +45,7 @@ export default function Toolbar() {
             {curTime.toLocaleTimeString("en-US", {
               hour: "2-digit",
               minute: "2-digit",
+              second: "2-digit",
             })}
           </p>
         </div>

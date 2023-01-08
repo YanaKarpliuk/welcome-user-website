@@ -15,11 +15,9 @@
     "lodash.throttle": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-image-follow": "^1.2.2",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "react-typewriter-effect": "^1.1.0",
     "typescript": "^4.9.4",
     "typewriter-effect": "^2.19.0",
     "web-vitals": "^2.1.4"

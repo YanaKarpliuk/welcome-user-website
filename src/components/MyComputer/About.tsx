@@ -1,26 +1,28 @@
 import ghost from "@images/ghost.gif";
 import Typewriter from "typewriter-effect";
 import { useRef } from "react";
-import anime from 'animejs';
+import anime from "animejs";
 import throttle from "lodash.throttle";
 import { useMemo } from "react";
 
 export default function About() {
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  const handleImageMovement = useMemo(() => throttle(
-    function(e: React.MouseEvent<HTMLElement, MouseEvent>) {
-      if (!imgRef.current) return;
+  const handleImageMovement = useMemo(
+    () =>
+      throttle(function (e: React.MouseEvent<HTMLElement, MouseEvent>) {
+        if (!imgRef.current) return;
 
-      anime({
-        targets: imgRef.current,
-        top: e.clientY === 0 ? "30%" : `${e.clientY}px`,
-        left: e.clientX === 0 ? "30%" : `${e.clientX}px`,
-        easing: "linear",
-        duration: 400
-      });
-    }, 200
-  ), []) 
+        anime({
+          targets: imgRef.current,
+          top: e.clientY === 0 ? "30%" : `${e.clientY}px`,
+          left: e.clientX === 0 ? "30%" : `${e.clientX}px`,
+          easing: "linear",
+          duration: 400,
+        });
+      }, 200),
+    []
+  );
 
   return (
     <section className="flex-1" onMouseMove={(e) => handleImageMovement(e)}>
