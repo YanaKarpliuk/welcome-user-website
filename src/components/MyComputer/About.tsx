@@ -1,15 +1,26 @@
 import ghost from "@images/ghost.gif";
 import Typewriter from "typewriter-effect";
-import { useState } from "react";
+import { useRef } from "react";
+import anime from 'animejs';
+import throttle from "lodash.throttle";
+import { useMemo } from "react";
 
 export default function About() {
-  const [left, setLeft] = useState(0);
-  const [top, setTop] = useState(0);
+  const imgRef = useRef<HTMLImageElement | null>(null);
 
-  function handleImageMovement(e: React.MouseEvent<HTMLElement, MouseEvent>) {
-    setLeft(e.clientX);
-    setTop(e.clientY);
-  }
+  const handleImageMovement = useMemo(() => throttle(
+    function(e: React.MouseEvent<HTMLElement, MouseEvent>) {
+      if (!imgRef.current) return;
+
+      anime({
+        targets: imgRef.current,
+        top: e.clientY === 0 ? "30%" : `${e.clientY}px`,
+        left: e.clientX === 0 ? "30%" : `${e.clientX}px`,
+        easing: "linear",
+        duration: 400
+      });
+    }, 200
+  ), []) 
 
   return (
     <section className="flex-1" onMouseMove={(e) => handleImageMovement(e)}>
@@ -30,13 +41,10 @@ export default function About() {
         }}
       />
       <img
+        ref={imgRef}
         src={ghost}
         alt="ghost gif"
-        style={{
-          left: left === 0 ? "30%" : `${left}px`,
-          top: top === 0 ? "30%" : `${top}px`,
-        }}
-        className="absolute h-[100px] transition-ease duration-[1000ms]"
+        className="absolute h-[100px]"
       />
     </section>
   );
