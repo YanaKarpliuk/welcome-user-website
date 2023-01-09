@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         greenBg: '#067A7B',
         grayBg: '#CCCCCC',
-        darkGray: '#737373'
+        darkGray: '#737373',
+        blueLink: '#0645AD'
       },
       boxShadow: {
         'menuBtn': '1px 1px 2px 1px #737373, inset 1px 1px 1px 1px #fff',

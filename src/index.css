@@ -42,4 +42,7 @@
   .menu-list-item-border:last-child {
     @apply border-b-0;
   }
+  .link {
+    @apply text-blueLink hover:underline
+  }
 }
