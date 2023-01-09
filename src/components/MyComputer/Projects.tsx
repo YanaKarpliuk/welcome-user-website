@@ -1,4 +1,5 @@
 import Typewriter from "typewriter-effect";
+import frog from '../../images/frog.png'
 
 export default function Projects() {
   return (
@@ -33,7 +34,7 @@ export default function Projects() {
               "<span>* <a class='link' href='https://yanakarpliuk.github.io/weather-app/' target='_blank'>https://yanakarpliuk.github.io/weather-app/</a></span><br/>"
             )
             .typeString(
-              "<span>* <a class='link' href='https://yanakarpliuk.github.io/icecream-team-11/' target='_blank'>https://yanakarpliuk.github.io/icecream-team-11/</a></span>"
+              "<span>* <a class='link' href='https://yanakarpliuk.github.io/icecream-team-11/' target='_blank'>https://yanakarpliuk.github.io/icecream-team-11/</a> ;)</span>"
             )
             .start();
         }}

@@ -14,7 +14,7 @@ export default function Technologies() {
   }, []);
 
   return (
-    <section>
+    <section className="flex-1">
       <Typewriter
         onInit={(typewriter) => {
           typewriter
