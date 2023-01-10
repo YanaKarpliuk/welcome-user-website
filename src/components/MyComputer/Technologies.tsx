@@ -19,7 +19,7 @@ export default function Technologies() {
         onInit={(typewriter) => {
           typewriter
             .changeDelay(10)
-            .typeString("<span>My tech stack:</span>")
+            .typeString("My tech stack:")
             .start();
         }}
       />

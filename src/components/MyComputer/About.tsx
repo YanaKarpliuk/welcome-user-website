@@ -31,13 +31,13 @@ export default function About() {
           typewriter
             .changeDelay(10)
             .typeString(
-              "<span>Hi there! My name is Yana and I am an aspiring software developer.</span><br/>"
+              "Hi there! My name is Yana and I am an aspiring software developer.<br/>"
             )
             .typeString(
-              "<span>I've built this website as a way to practice my skills and learn new things.</span><br/>"
+              "I've built this website as a way to practice my skills and learn new things.<br/>"
             )
             .typeString(
-              "<span>I hope you have fun playing the games I've added. Enjoy ;)</span>"
+              "I hope you have fun playing the games I've added. Enjoy ;)"
             )
             .start();
         }}
