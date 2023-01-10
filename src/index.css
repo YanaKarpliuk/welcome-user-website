@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+@layer base {
+  body {
+    @apply overflow-x-hidden
+  }
+}
+
 @layer utilities {
   .icon-hover {
     @apply hover:bg-blue-200 hover:bg-opacity-50 border-[1px] border-transparent hover:border-blue-300;
