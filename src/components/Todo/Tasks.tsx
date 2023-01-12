@@ -1,3 +1,3 @@
 export default function Tasks() {
-  return <div>tasks</div>
+  return <section className="flex-[2]">tasks</section>;
 }

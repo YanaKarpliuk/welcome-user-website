@@ -4,9 +4,9 @@ import TopSection from "components/TopSection/TopSection";
 
 export default function Todo() {
   return (
-    <section>
+    <section className="h-[100%] flex flex-col">
       <TopSection title="To do" />
-      <div className="p-[20px] text-[24px] flex">
+      <div className="text-[24px] flex h-[100%]">
         <Form />
         <Tasks />
       </div>
