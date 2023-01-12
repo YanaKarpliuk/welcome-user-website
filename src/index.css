@@ -9,8 +9,11 @@
 }
 
 @layer base {
-  body {
-    @apply overflow-x-hidden
+  html, body {
+    @apply overflow-x-hidden h-[100%]
+  }
+  #root{
+    @apply h-[100%]
   }
 }
 
@@ -51,15 +54,4 @@
   .link {
     @apply text-blueLink hover:underline
   }
-}
-
-#page-wrap {
-  background-color: aliceblue;
-  width: 300px;
-}
-
-#outer-container {
-  position: absolute;
-  top: 0;
-  left: 50px;
 }

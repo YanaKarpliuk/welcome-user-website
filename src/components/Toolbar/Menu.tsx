@@ -44,9 +44,9 @@ export default function MenuSection() {
           </Link>
         </MenuItem>
         <MenuItem className="menu-list-item-border">
-          <Link to="/music" className="menu-list-item-link">
+          <Link to="/todo" className="menu-list-item-link">
             <img className="menu-img" src={notepadIcon} alt="notepad" />
-            <p>Notepad</p>
+            <p>To do</p>
           </Link>
         </MenuItem>
         <MenuItem className="menu-list-item-border">

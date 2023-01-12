@@ -8,10 +8,11 @@ import Technologies from "components/MyComputer/Technologies";
 import Projects from "components/MyComputer/Projects";
 import Hobbies from "components/MyComputer/Hobbies";
 import Links from "components/MyComputer/Links";
+import Todo from "pages/Todo";
 
 function App() {
   return (
-    <div className="font-display">
+    <div className="font-display h-[100%] flex flex-col justify-between">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/my-computer" element={<MyComputer />}>
@@ -22,6 +23,7 @@ function App() {
           <Route path="links" element={<Links />} />
         </Route>
         <Route path="/music" element={<Music />} />
+        <Route path="/todo" element={<Todo />} />
       </Routes>
       <Toolbar />
     </div>

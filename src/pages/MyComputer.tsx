@@ -16,12 +16,12 @@ const dataList = [
 export default function MyComputer() {
   return (
     <DndProvider backend={HTML5Backend}>
-      <section>
+      <section className="h-[100%] flex flex-col">
         <TopSection title="My computer" />
-        <div className="flex items-stretch">
-          <ul className="border-r-[1px] w-[30vw] h-[90vh]">
+        <div className="flex items-stretch justify-items-stretch grow">
+          <ul className="border-r-[1px] w-[20vw]">
             {dataList.map((item) => {
-              return (
+              return ( 
                 <li key={item.title}>
                   <NavLink
                     to={item.link}
@@ -38,7 +38,7 @@ export default function MyComputer() {
               );
             })}
           </ul>
-          <div className="p-[20px] text-[24px] w-[100vw] flex items-stretch">
+          <div className="p-[20px] text-[24px] grow flex">
             <Outlet />
           </div>
         </div>

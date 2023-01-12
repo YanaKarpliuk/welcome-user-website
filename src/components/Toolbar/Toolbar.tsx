@@ -13,7 +13,7 @@ export default function Toolbar() {
   }, []);
 
   return (
-    <nav className="bg-grayBg p-[20px] fixed bottom-0 w-[100vw]">
+    <nav className="bg-grayBg p-[20px] w-[100vw]">
       <div className="flex items-center justify-between">
         <div className="flex">
           <MenuSection />

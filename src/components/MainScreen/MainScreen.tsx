@@ -18,7 +18,7 @@ export default function MainScreen() {
   }, [userName]);
 
   return (
-    <div className="h-[100vh] bg-greenBg p-[30px]">
+    <div className="bg-greenBg p-[30px] min-w-[100vw]">
       <ul className="flex justify-between text-white text-[18px]">
         <div>
           <li className="mb-[50px] transition-effect icon-hover">
