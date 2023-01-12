@@ -52,3 +52,14 @@
     @apply text-blueLink hover:underline
   }
 }
+
+#page-wrap {
+  background-color: aliceblue;
+  width: 300px;
+}
+
+#outer-container {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
